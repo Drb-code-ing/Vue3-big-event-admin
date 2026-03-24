@@ -50,6 +50,7 @@ const onSuccess = () => {
     <!-- 主体部分 -->
     <el-table v-loading="loading" :data="channelList" style="width: 100%">
       <el-table-column type="index" label="序号" width="100"></el-table-column>
+      <!-- prop 是要显示的字段，其中内容从channelList的每一项中获取 -->
       <el-table-column prop="cate_name" label="分类名称"></el-table-column>
       <el-table-column prop="cate_alias" label="分类别名"></el-table-column>
       <el-table-column label="操作" width="150">
