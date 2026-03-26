@@ -21,3 +21,26 @@ export const userLoginService = ({ username, password }) => {
 export const userGetInfoService = () => {
   return request.get('/my/userinfo')
 }
+
+// 更新用户基本信息
+export const userUpdateInfoService = ({ id, nickname, email }) => {
+  return request.put('/my/userinfo', {
+    id,
+    nickname,
+    email
+  })
+}
+
+// 更新用户头像
+export const userUpdateAvatarService = (avatar) => {
+  return request.patch('/my/update/avatar', { avatar })
+}
+
+// 重置密码
+export const userUpdatePasswordService = ({ odl_pwd, new_pwd, re_pwd }) => {
+  return request.patch('/my/updatepwd', {
+    odl_pwd,
+    new_pwd,
+    re_pwd
+  })
+}
